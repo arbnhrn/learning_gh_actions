@@ -1,8 +1,8 @@
-name: Conditions
+name: Conditions workflow
 on: push
 jobs:
   skip-or-run:
+    if: ${{ github.actor == 'arbnhrn' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello"
-        if: ${{ contains(github.run_id, '1') }}
