@@ -1,7 +1,7 @@
 name: GitHub Actions static analysis
 on:
   pull_request:
-    paths: ['.github/workflow/*yml', '.github/workflow/*yaml']
+    paths: ['.github/workflow/*.yml', '.github/workflow/*.yaml']
 defaults:
   run:
     shell: bash
