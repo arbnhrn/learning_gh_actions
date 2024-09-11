@@ -1,9 +1,15 @@
-name: Job summaries
+name: Parallel jobs
 on: push
 jobs:
-  log:
+  first:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "## Exapmle Title :rocket:" >> ${GITHUB_STEP_SUMMARY}
-      - run: echo "- first line" >> ${GITHUB_STEP_SUMMARY}
-      - run: echo "- second line" >> ${GITHUB_STEP_SUMMARY}
+      - run: sleep 10 && echo "First job"  
+  second:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 10 && echo "Second job"
+  third:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 10 && echo "Third job"
