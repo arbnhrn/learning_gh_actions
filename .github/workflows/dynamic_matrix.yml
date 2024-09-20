@@ -16,4 +16,4 @@ jobs:
       matrix: ${{ fromJSON(needs.prepare.outputs.matrix-json) }}
     runs-on: ${{ matrix.runner }}
     steps:
-      - run: echo "${{RUNNER_OS}}"
+      - run: echo "${RUNNER_OS}"
